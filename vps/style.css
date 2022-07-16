@@ -1,0 +1,39 @@
+button.get-photo
+{
+	width: 120px;
+	padding: 10px;
+	display: block;
+	margin: 20px auto;
+	border: 2px solid #111111;
+	cursor: pointer;
+	background-color: white;
+}
+
+button.small-button
+{
+	font-size: 9pt;
+	position: absolute;
+	left: 3pt;
+}
+
+video.web-camera
+{
+	margin: 10pt auto 0 auto;
+}
+
+h1, h2
+{
+	width: 100%;
+	text-align: center;
+}
+
+div.video-container
+{
+	width: 100%;
+	text-align: center;
+}
+
+img
+{
+	cursor: pointer;
+}

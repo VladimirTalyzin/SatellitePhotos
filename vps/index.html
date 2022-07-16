@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="RU">
+<head>
+<title>Определение домов на спутниковых снимках</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<LINK href="style.css" rel="stylesheet">
+<script type="text/javascript" src="web-camera.js"></script>
+<script src="script.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+<h1 id="header">Определение домов на спутниковых снимках</h1>
+<h2>Выберите файл</h2>
+<div style="text-align: center;"><input type="file" id="select-file"></div>
+<br>
+<h2>Или снимите на камеру</h2>
+<button id="switch-face" class="small-button">↺</button>
+<button id="mirror" class="small-button" style="left: 30pt;">⇌</button>
+<div id="video-container" class="video-container">
+	<video id="web-camera" class="web-camera" autoplay muted playsinline></video>
+</div>
+
+<button id="get-photo" class="get-photo">Проверить</button>
+<br><br>
+<h2>Или Test 1</h2>
+<div style="text-align: center;"><img src="1.jpg" alt="Test 1" crossorigin="anonymous" onclick="selectTest(this)"></div>
+<br>
+
+<h2>Или Test 2</h2>
+<div style="text-align: center;"><img src="2.jpg" alt="Test 2" crossorigin="anonymous" onclick="selectTest(this)"></div>
+<br>
+
+<h2>Или Test 3</h2>
+<div style="text-align: center;"><img src="3.jpg" alt="Test 3" crossorigin="anonymous" onclick="selectTest(this)"></div>
+
+</body>
+</html>
