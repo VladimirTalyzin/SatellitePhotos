@@ -12,7 +12,7 @@ from utility import align32, getPrepare, applyCheckAugmentation, preview, getCon
 # режим работы
 # True - оптимизация параметров
 # False - получение контуров на фотографиях и формирование csv-файла результата
-scoreTrainMode = True
+scoreTrainMode = False
 
 # файл с обученной моделью
 modelName = "satellite_gpu.pth"
