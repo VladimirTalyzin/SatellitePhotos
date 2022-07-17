@@ -53,8 +53,8 @@ if __name__ == "__main__":
             #   это всё происходит в памяти устройства torch, и данные оттуда ещё надо достать
             # cpu - переводит данные из памяти устройства torch в процессор, если это было GPU-устройство
             # если устройство и было cpu, то просто возвращаются те же данные
-            # полученные данные преобразуются в формат numpy и округляются (становятся матрицей с 0 или 1)
-            predictedMask = model.predict(imageData).squeeze().cpu().numpy().round()
+            # полученные данные преобразуются в формат numpy
+            predictedMask = model.predict(imageData).squeeze().cpu().numpy()
 
             # получаем список контуров
             contoursPredicted = getContours(predictedMask, threshold = threshold, minArea = minArea)
