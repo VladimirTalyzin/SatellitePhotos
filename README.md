@@ -1,5 +1,9 @@
 # SatellitePhotos
 
+1-е место в чемпионате
+
+![Диплом](https://0v.ru/satellite/diplom.png)
+
 **test_training.py** - запустить обучение и сохранить лучшую модель
 
 **test_result.py** - запустить распознавание по сохранённой модели
