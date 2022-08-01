@@ -20,6 +20,9 @@ python test_file.py 1.jpg
 * Для CPU: https://0v.ru/satellite/satellite_cpu.pth
 
 
+**Update 01.08.2022**: в test_file.py добавлена поддержка карт большого размера:
+
+![Большая карта](https://0v.ru/satellite/big-map.png)
 
 В папку **train** необходимо залить картинки для обучающей выборки
 
