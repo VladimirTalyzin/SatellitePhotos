@@ -1,6 +1,6 @@
 from datetime import datetime
 from albumentations import Lambda, Compose, Resize
-from matplotlib.pyplot import figure, imshow, plot, savefig, close, box, axis
+from matplotlib.pyplot import figure, imshow, plot, savefig, close, box, axis, show
 from numpy import expand_dims, float32
 from skimage import measure
 import cv2
@@ -46,9 +46,13 @@ def getPrepare(prepareFunction):
 
 
 # вывод изображения с нарисованными поверх контурами
-def preview(previewImage, contours, previewImageName):
+# showOrSave = True - сохранение в файл
+# showOrSave = False - показать файл пользователю
+def preview(previewImage, contours, previewImageName, saveOrShow = True):
+    dpi = 100
+    figureSize = (previewImage.width / dpi, previewImage.height / dpi)
     # создаём фигуру matplotlib
-    previewFigure = figure()
+    previewFigure = figure(figsize = figureSize, dpi = dpi)
     # убираем рамки вокруг и оси, они тут не нужны
     box(False)
     axis('off')
@@ -61,8 +65,11 @@ def preview(previewImage, contours, previewImageName):
         plot(contour[:, 1], contour[:, 0], linewidth=2)
 
     # сохранить полученное изображение в PNG-файл
-    savefig(previewImageName if "/" in previewImageName else "results/preview_" + previewImageName.replace(".jpg", ".png"),
+    if saveOrShow:
+        savefig(previewImageName if "/" in previewImageName else "results/preview_" + previewImageName.replace(".jpg", ".png"),
             bbox_inches = "tight", pad_inches = 0)
+    else:
+        show()
 
     # Удалить объект фигуры из памяти.
     # При формировании 900 картинок проблема утечки памяти становится актуальной
